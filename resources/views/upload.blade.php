@@ -84,9 +84,12 @@
                     }
                 });
 
-                this.$dispatch('csv-uploaded', response.data);
-                this.resetSelection();
                 this.showSuccess('CSV uploaded and processed successfully!');
+
+                setTimeout(() => {
+                    window.location.href = '{{ route('work-logs') }}';
+                }, 0);
+
             } catch (error) {
                 this.errorMessage = error.response?.data?.message || 'Upload failed. Please check your CSV format.';
                 console.error('Upload error:', error);
@@ -157,7 +160,7 @@
                             <span class="font-semibold text-green-600 dark:text-green-400">Click to browse</span> or drag and drop
                         </p>
                         <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                            Only CSV files accepted (Max 5MB)
+                            Only CSV files accepted (Max 80MB)
                         </p>
 
                         <p x-show="errorMessage" class="text-sm text-red-500 dark:text-red-400 mb-4" x-text="errorMessage"></p>
@@ -181,7 +184,6 @@
                 </label>
             </template>
 
-            <!-- File Selected -->
             <template x-if="selectedFile">
                 <div class="w-full h-full flex flex-col items-center justify-center p-8">
                     <div class="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -246,9 +248,6 @@
             class="absolute top-6 right-6 p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             @click="$dispatch('close-uploader')"
         >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
         </button>
     </form>
 </div>

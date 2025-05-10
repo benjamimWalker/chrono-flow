@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\BatchStoreWorkLogsFromCsv;
 use App\Http\Requests\CsvUploadRequest;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 
 class CsvUploadController extends Controller
 {
@@ -13,8 +13,8 @@ class CsvUploadController extends Controller
         return view('upload');
     }
 
-    public function upload(CsvUploadRequest $request)
+    public function upload(CsvUploadRequest $request, BatchStoreWorkLogsFromCsv $batchStoreWorkLogsFromCsv): void
     {
-        return response()->json(['fala' => 'meu']);
+        $batchStoreWorkLogsFromCsv->handle($request->file('csv'));
     }
 }
