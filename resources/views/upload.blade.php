@@ -45,9 +45,9 @@
                 return;
             }
 
-            const maxSize = 5 * 1024 * 1024;
+            const maxSize = 80 * 1024 * 1024;
             if (file.size > maxSize) {
-                this.errorMessage = 'File size must be less than 5MB';
+                this.errorMessage = 'File size must be less than 80MB';
                 if (this.fileInput) this.fileInput.value = '';
                 return;
             }

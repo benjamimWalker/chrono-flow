@@ -33,3 +33,4 @@ services:
         container_name: app
         volumes:
             - ./:/var/www/html
+            - ./php.ini:/usr/local/etc/php/conf.d/custom.ini
