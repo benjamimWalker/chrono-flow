@@ -78,7 +78,7 @@ After importing, the app redirects to a results page that lists all entries pagi
 ## Features
 
 The main features of the application are:
-- High-speed processing of large PDF files using Laravel 12's new concurrency features.
+- High-speed processing of large CSV files using Laravel 12's new concurrency features.
 - Bulk insertion of up to 1,000,000 records into MySQL in a few seconds.
 - Full test coverage with PestPHP.
 - Clean, maintainable Laravel 12 code with proper architecture.
