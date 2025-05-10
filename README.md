@@ -27,7 +27,7 @@ git clone https://github.com/benjamimWalker/chrono-flow.git
 
 * Go to the project folder:
 ```sh
-  cd chrono-flow
+cd chrono-flow
 ```
 
 * Prepare environment files:
