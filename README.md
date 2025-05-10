@@ -21,9 +21,9 @@ Key Technologies used:
 > You must have Docker and Docker Compose installed on your machine.
 
 * Clone the repository:
-  sh
-  git clone https://github.com/benjamimWalker/chrono-flow.git
-
+```sh
+git clone https://github.com/benjamimWalker/chrono-flow.git
+```
 
 * Go to the project folder:
 ```sh
