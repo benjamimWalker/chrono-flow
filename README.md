@@ -26,38 +26,39 @@ Key Technologies used:
 
 
 * Go to the project folder:
-  sh
+```sh
   cd chrono-flow
-
+```
 
 * Prepare environment files:
-  sh
-  cp .env.example .env
-
+```sh
+cp .env.example .env
+```
 
 * Build the containers:
-  sh
-  docker compose up -d
-
+```sh
+docker compose up -d
+```
 
 * Install composer dependencies:
-  sh
-  docker compose exec app composer install
-
+```sh
+docker compose exec app composer install
+```
 
 * Run the migrations:
-  sh
-  docker compose exec app php artisan migrate
-
+```sh
+docker compose exec app php artisan migrate
+```
 
 * Build the assets:
-  sh
-  docker-compose run --rm npm install
-
+```sh
+docker-compose run --rm npm install
+```
 
 * You can now execute the tests:
-  sh
-  docker compose exec app php artisan test
+```sh
+docker compose exec app php artisan test
+```
 
 ## How to use
 
