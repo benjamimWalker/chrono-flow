@@ -52,7 +52,7 @@ docker compose exec app php artisan migrate
 
 * Build the assets:
 ```sh
-docker compose run --rm npm install
+docker compose run --rm npm run build
 ```
 
 * You can now execute the tests:
