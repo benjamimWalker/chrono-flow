@@ -50,6 +50,11 @@ docker compose exec app composer install
 docker compose exec app php artisan migrate
 ```
 
+* Install npm dependencies:
+```sh
+docker compose run --rm npm install
+```
+
 * Build the assets:
 ```sh
 docker compose run --rm npm run build
